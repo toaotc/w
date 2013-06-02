@@ -18,7 +18,7 @@ body {
     background-repeat: no-repeat;
 
     @include border-radius(50%);
-    @include box-shadow(0 0 0 5px white, 1px 0 5px 5px black, 0px 0 2px black inset !important);
+    @include box-shadow(0 0 0 3px white, 1px 0 5px 3px black, 0px 0 2px black inset !important);
 
     margin: 0 auto;
     height: 120px;
