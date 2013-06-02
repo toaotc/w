@@ -22,6 +22,7 @@ class AppKernel extends Kernel
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Toa\Bundle\TwitterBootstrapBundle\ToaTwitterBootstrapBundle(),
+            new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

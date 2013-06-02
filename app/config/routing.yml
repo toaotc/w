@@ -1,0 +1,5 @@
+toa_welcome:
+    resource: "@ToaWelcomeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
