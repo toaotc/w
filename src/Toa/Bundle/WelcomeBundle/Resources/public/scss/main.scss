@@ -13,7 +13,7 @@ body {
   padding-top: 30%;
 
   .thumbnail {
-    background-size: cover;
+    @include background-size(cover);
     @include border-radius(50%);
     @include box-shadow(0 0 0 5px white, 1px 0 5px 5px black, 0px 0 2px black inset !important);
 
@@ -21,10 +21,10 @@ body {
     height: 120px;
     width: 120px;
 
-    &.jana { background:transparent url(../images/jana.jpg) scroll center center; }
-    &.jakob { background:transparent url(../images/jakob.jpg) scroll center center; }
-    &.anton { background:transparent url(../images/anton.jpg) scroll center center; }
-    &.enrico { background:transparent url(http://s.gravatar.com/avatar/6cee33b651e13b04cd89c6456958f977?s=240) scroll center center; }
+    &.jana { background:transparent url(../images/jana.jpg) no-repeat scroll center center; }
+    &.jakob { background:transparent url(../images/jakob.jpg) no-repeat scroll center center; }
+    &.anton { background:transparent url(../images/anton.jpg) no-repeat scroll center center; }
+    &.enrico { background:transparent url(http://s.gravatar.com/avatar/6cee33b651e13b04cd89c6456958f977?s=240) no-repeat scroll center center; }
   }
 
   .username {
