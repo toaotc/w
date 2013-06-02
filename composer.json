@@ -21,9 +21,7 @@
 
         "toa/twitter-bootstrap-bundle": "*",
         "stof/doctrine-extensions-bundle": "*@dev",
-        "leafo/lessphp": "*",
-        "leafo/scssphp": "*@dev",
-        "leafo/scssphp-compass": "*@dev"
+        "leafo/lessphp": "*"
     },
     "scripts": {
         "post-install-cmd": [
