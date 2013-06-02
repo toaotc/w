@@ -7,7 +7,7 @@
         'components/bootstrap/less/bootstrap.less'
         'bundles/toawelcome/less/main.less'
         'components/bootstrap/less/responsive.less'
-        filter='cssrewrite,?yui_css'
+        filter='cssrewrite'
         output='css/compiled/toawelcome.css'
     %}
     <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
@@ -20,7 +20,6 @@
         'components/jquery/jquery.js'
         'components/bootstrap/js/bootstrap-tooltip.js'
         'components/bootstrap/js/*.js'
-        filter='cssrewrite,?yui_js'
         output='js/compiled/toawelcome.js'
     %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
