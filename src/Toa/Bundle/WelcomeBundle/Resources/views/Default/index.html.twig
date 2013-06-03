@@ -1,4 +1,4 @@
-{% extends 'ToaWelcomeBundle::layout.html.twig' %}
+{% extends 'ToaWelcomeBundle::layout.foundation.html.twig' %}
 
 {% block content %}
     <div class="row">
@@ -8,6 +8,26 @@
                 <li class="span2"><a href="#" class="thumbnail jakob"></a><div class="username"><span class="badge badge-inverse">Jakob</span></div></li>
                 <li class="span2"><a href="#" class="thumbnail anton"></a><div class="username"><span class="badge badge-inverse">Anton</span></div></li>
                 <li class="span2"><a href="#" class="thumbnail enrico"></a><div class="username"><span class="badge badge-inverse">Enrico</span></div></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="row people">
+        <div class="small-12 small-centered columns">
+            <ul class="small-block-grid-3 large-block-grid-6">
+                {% for a in 0..5 %}
+                {% for p in ['Jana', 'Jakob', 'Anton', 'Enrico'] %}
+                    <li class="user">
+                        <a class="th round small-10">
+                            <img class="small-12 {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                        </a>
+                        <br />
+                        <span class="label round inverse username">{{ p }}</span>
+                    </li>
+                {% endfor %}
+                {% endfor %}
             </ul>
         </div>
     </div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+        {% stylesheets
+            'components/foundation/scss/normalize.scss'
+            'bundles/toawelcome/scss/foundation/app.scss'
+            filter='cssrewrite,?yui_css'
+            output='css/compiled/toawelcome.foundation.css'
+        %}
+            <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+        {% endstylesheets %}
+    {% endblock %}
+
+    <script src="{{ asset('components/foundation/js/vendor/custom.modernizr.js') }}"></script>
+</head>
+<body>
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript">
+        document.write('<script src=' + ('__proto__' in {} ? 'components/foundation/js/vendor/zepto' : 'components/foundation/js/vendor/jquery') + '.js><\/script>')
+    </script>
+
+    {% block javascripts %}
+        {% javascripts
+            'components/foundation/js/foundation/foundation.js'
+            'components/foundation/js/foundation/foundation.alerts.js'
+            'components/foundation/js/foundation/foundation.clearing.js'
+            'components/foundation/js/foundation/foundation.cookie.js'
+            'components/foundation/js/foundation/foundation.dropdown.js'
+            'components/foundation/js/foundation/foundation.forms.js'
+            'components/foundation/js/foundation/foundation.interchange.js'
+            'components/foundation/js/foundation/foundation.joyride.js'
+            'components/foundation/js/foundation/foundation.magellan.js'
+            'components/foundation/js/foundation/foundation.orbit.js'
+            'components/foundation/js/foundation/foundation.placeholder.js'
+            'components/foundation/js/foundation/foundation.reveal.js'
+            'components/foundation/js/foundation/foundation.section.js'
+            'components/foundation/js/foundation/foundation.tooltips.js'
+            'components/foundation/js/foundation/foundation.topbar.js'
+            filter='?yui_js'
+            output='js/compiled/toawelcome.foundation.js'
+        %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+    <script type="text/javascript">
+        $(document).foundation();
+    </script>
+</body>
+</html>
