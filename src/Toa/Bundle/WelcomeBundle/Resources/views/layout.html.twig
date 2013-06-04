@@ -1,28 +1,48 @@
-{% extends 'ToaTwitterBootstrapBundle::layout.html.twig' %}
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-{% block stylesheets %}
+<head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>
 
-    {% stylesheets
-        'components/bootstrap/less/bootstrap.less'
-        'bundles/toawelcome/scss/main.scss'
-        'components/bootstrap/less/responsive.less'
-        filter='cssrewrite,?yui_css'
-        output='css/compiled/toawelcome.css'
-    %}
-    <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
-    {% endstylesheets %}
+    {% block stylesheets %}
+        {% stylesheets
+            'bundles/toawelcome/scss/main.scss'
+            filter='cssrewrite,?yui_css'
+            output='css/compiled/toawelcome.css'
+        %}
+            <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+        {% endstylesheets %}
+    {% endblock %}
 
-{% endblock %}
+    <script src="{{ asset('bundles/toawelcome/components/foundation/js/vendor/custom.modernizr.js') }}"></script>
+</head>
+<body>
+    {% block body %}{% endblock %}
 
-{% block javascripts %}
-    {% javascripts
-        'components/jquery/jquery.js'
-        'components/bootstrap/js/bootstrap-tooltip.js'
-        'components/bootstrap/js/*.js'
-        filter='?yui_js'
-        output='js/compiled/toawelcome.js'
-    %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
-{% endblock %}
+    <script type="text/javascript">
+        document.write('<script src="' + (
+            '__proto__' in {}
+            ? '{{ asset('bundles/toawelcome/components/foundation/js/vendor/zepto.js') }}'
+            : '{{ asset('bundles/toawelcome/components/foundation/js/vendor/jquery.js') }}'
+        ) + '"><\/script>')
+    </script>
+
+    {% block javascripts %}
+        {% javascripts
+            'bundles/toawelcome/components/foundation/js/foundation/foundation.js'
+            'bundles/toawelcome/components/foundation/js/foundation/foundation*.js'
+            filter='?yui_js'
+            output='js/compiled/toawelcome.js'
+        %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+    <script type="text/javascript">
+        $(document).foundation();
+    </script>
+</body>
+</html>

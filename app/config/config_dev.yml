@@ -27,3 +27,8 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+sp_bower:
+    bin: /usr/local/bin/bower
+    bundles:
+        ToaWelcomeBundle: ~
