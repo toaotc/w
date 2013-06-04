@@ -12,7 +12,7 @@ class DefaultController extends Controller
      * @Route("/")
      * @Template()
      */
-    public function indexAction()
+    public function defaultAction()
     {
         return array();
     }
