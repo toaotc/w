@@ -1,0 +1,25 @@
+{% extends 'ToaWelcomeBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="row users">
+        <div class="small-8 small-centered columns">
+            <ul class="small-block-grid-2 large-block-grid-4">
+                {% for a in 0..0 %}
+                    {% for p in ['Jana', 'Jakob', 'Anton', 'Enrico'] %}
+                        <li class="user">
+                            {% if p|lower == name %}
+                            <a class="th round small-10">
+                                <img class="small-12 {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                            </a>
+
+                            <div>
+                                <span class="label round inverse username">{{ p }}</span>
+                            </div>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

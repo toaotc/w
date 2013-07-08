@@ -39,11 +39,12 @@ WordPress (Versions marked 3/20/13)
 * [WP-Foundation](http://320press.com/wp-foundation/features/) by 320press using Foundation version 3
 * [f415](https://github.com/javorszky/f415) by Gabor Javorszky
 * [Narga Core](https://github.com/Narga/narga-core) by Nguyễn Đình Quân
+* [Basey](https://github.com/zslabs/basey-theme) by Zach Schnackel 
 
 Joomla
 
 * [Joomla Template](https://github.com/meridiansoftech/joomla_foundation_template) by Arnold Mwumva Ford, Meridian Softech
-* [Joomla Template](https://github.com/antonydoyle/siegeengine) by Antony Doyle, Siege21
+* [Joomla Template](https://github.com/antonydoyle/siegeengine2) by Antony Doyle, Siege21
 
 Drupal
 
@@ -73,10 +74,14 @@ MODX
 Middleman
 
 * [Middleman Skeleton](https://github.com/axyz/middleman-zurb-foundation) by [Andrea Moretti](https://twitter.com/axyz)
+* [Middleman Foundation 4.x Template](https://github.com/mattolson/middleman-zurb-template) by [Matt Olson](http://mattolson.com)
 
 Magento
 * [Magento & Foundation](https://github.com/nandroid/MagentoFoundation) by Nandroid
 * [Waterlee Boilerplate](https://github.com/zeljkoprsa/waterlee-boilerplate) by Jake Sharp
+
+Metoer
+* [Meteor Package for Foundation](https://atmosphere.meteor.com/package/foundation) by Eric Wallace
 
 Python
 * [Pyramid Scaffold](https://github.com/ppinette/pyramid_foundation) by Parker Pinette
@@ -88,6 +93,14 @@ CodeIgniter
 Shopify
 
 * [Foundationify Shopify Theme](https://github.com/lukebussey/foundationify) by Luke Bussey
+
+Silverstripe
+
+* [Foundation Silverstripe Theme](https://github.com/ryanwachtl/silverstripe-foundation) by [Ryan Wachtl](https://github.com/ryanwachtl)
+
+Orchard
+
+  * [Foundation Theme for Orchard CMS](https://foundationorchardcms.codeplex.com/)
 
 Other Implementations
 

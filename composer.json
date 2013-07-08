@@ -22,11 +22,13 @@
 
         "jms/security-extra-bundle": "*",
         "jms/di-extra-bundle": "*",
-        "stof/doctrine-extensions-bundle": "*@dev"
+        "stof/doctrine-extensions-bundle": "*@dev",
+        "hwi/oauth-bundle": "@dev"
     },
     "require-dev": {
         "sp/bower-bundle": "*@dev",
-        "leafo/lessphp": "*"
+        "leafo/lessphp": "*",
+        "phpunit/phpunit": "*"
     },
     "scripts": {
         "post-install-cmd": [

@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),
         );
 

@@ -85,3 +85,15 @@ services:
        class: Twig_Extensions_Extension_Text
        tags:
            - { name: twig.extension }
+    hwi_oauth.user.provider.entity:
+        class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
+
+hwi_oauth:
+    firewall_name: secured_area
+    connect: ~
+    resource_owners:
+        google:
+            type:           google
+            client_id:      %google_client_id%
+            client_secret:  %google_client_secret%
+            scope:          "https://www.googleapis.com/auth/userinfo.profile"

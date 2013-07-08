@@ -7,7 +7,7 @@
                 {% for a in 0..0 %}
                     {% for p in ['Jana', 'Jakob', 'Anton', 'Enrico'] %}
                         <li class="user">
-                            <a class="th round small-10">
+                            <a href="{{ path('toa_welcome_default_detail', {'name': p|lower}) }}" class="th round small-10">
                                 <img class="small-12 {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
                             </a>
 
