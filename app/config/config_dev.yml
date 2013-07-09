@@ -33,7 +33,7 @@ assetic:
 sp_bower:
     assetic:
         enabled: false
-    bin: /usr/local/bin/bower
+#    bin: /usr/local/bin/bower
     bundles:
         ToaWelcomeBundle: ~
     install_on_warmup: false
