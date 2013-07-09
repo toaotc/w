@@ -85,7 +85,7 @@ services:
        class: Twig_Extensions_Extension_Text
        tags:
            - { name: twig.extension }
-    hwi_oauth.user.provider:
+    oauth.user.provider:
         class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
 
 hwi_oauth:
