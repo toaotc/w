@@ -21,12 +21,18 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+            new Misd\PhoneNumberBundle\MisdPhoneNumberBundle(),
+
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new Toa\Bundle\AddressbookBundle\ToaAddressbookBundle(),
             new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),
+            //new Toa\Bundle\GenealogyBundle\ToaGenealogyBundle(),
+            //new Toa\Bundle\MediaBundle\ToaMediaBundle(),
+            new Toa\Bundle\AclTestBundle\ToaAclTestBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Sp\BowerBundle\SpBowerBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

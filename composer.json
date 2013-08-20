@@ -26,7 +26,6 @@
         "hwi/oauth-bundle": "@dev"
     },
     "require-dev": {
-        "sp/bower-bundle": "*@dev",
         "leafo/lessphp": "*",
         "phpunit/phpunit": "*"
     },

@@ -29,11 +29,3 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
-
-sp_bower:
-    assetic:
-        enabled: false
-#    bin: /usr/local/bin/bower
-    bundles:
-        ToaWelcomeBundle: ~
-    install_on_warmup: false
