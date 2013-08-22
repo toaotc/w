@@ -1,30 +1,26 @@
 @import "compass";
-@import "../../../bower_components/foundation/scss/normalize";
-@import "../../../bower_components/foundation/scss/foundation";
 
-
-.label.inverse {
+.badge.inverse {
   background-color: #333;
 }
 
-.th {
-  &.round {
-    @include border-radius(50%);
-
-    img {
-      @include border-radius(50%);
-      @include background-size(cover);
-      @include box-shadow(0 0 0 3px white, 1px 0 5px 3px black, 0px 0 3px black inset !important);
-
-      background-position: center center;
-      background-repeat: no-repeat;
-
-      &.jana { background-image: url(../images/jana.jpg); }
-      &.jakob { background-image: url(../images/jakob.jpg); }
-      &.anton { background-image: url(../images/anton.jpg); }
-      &.enrico { background-image: url(http://s.gravatar.com/avatar/6cee33b651e13b04cd89c6456958f977?s=240); }
+.people {
+    .badge {
+        @include box-shadow(0 0 4px white);
     }
-  }
+    
+    img {
+        &.img-thumbnail {
+            @include background-size(cover);
+            @include box-shadow(0 0 0 3px white, 1px 0 5px 3px black, 0px 0 3px black inset !important);
+            width: 75%;
+        }
+        
+        &.jana { background-image: url(../images/jana.jpg); }
+        &.jakob { background-image: url(../images/jakob.jpg); }
+        &.anton { background-image: url(../images/anton.jpg); }
+        &.enrico { background-image: url(http://s.gravatar.com/avatar/6cee33b651e13b04cd89c6456958f977?s=240); }
+    }
 }
 
 html {
@@ -37,20 +33,3 @@ body {
   background-color: transparent;
   padding-top: 15%;
 }
-
-.users {
-  ul {
-    margin: 0;
-  }
-
-  .user {
-    text-align: center;
-
-    .username {
-      @include box-shadow(0 0 4px white);
-
-      margin-top: 10px;
-    }
-  }
-}
-

@@ -1,19 +1,17 @@
 {% extends 'ToaWelcomeBundle::layout.html.twig' %}
 
-{% block body %}
+{% block content %}
+{% spaceless %}
     <div class="row">
-        <div class="small-8 small-centered columns">
-            <ul class="small-block-grid-1">
-                {% for owner in hwi_oauth_resource_owners() %}
-                    <li>
-                        <a class="button round small small-12" href="{{ hwi_oauth_login_url(owner) }}">
-                            {{ 'connect with %owner%'|trans({'%owner%': owner|trans({}, 'HWIOAuthBundle')}) }}
-                            <br />
-                            <small>just testing - not harvesting</small>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
+            {% for owner in hwi_oauth_resource_owners() %}
+                <a class="btn btn-lg btn-primary btn-block" href="{{ hwi_oauth_login_url(owner) }}">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    {{- ' ' }}
+                    {{- 'connect with %owner%'|trans({'%owner%': owner|trans({}, 'HWIOAuthBundle')}) -}}
+                </a>
+            {% endfor %}
         </div>
     </div>
+{% endspaceless %}
 {% endblock %}

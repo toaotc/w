@@ -13,21 +13,12 @@ security:
     providers:
         oauth:
             id: oauth.user.provider
-        in_memory:
-            memory:
-                users:
-                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
 
     firewalls:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
             
-        welcome:
-            pattern: ^/$
-            security: false
-
         secured_area:
             anonymous: ~
             pattern: ^/
@@ -43,6 +34,6 @@ security:
                 target: toa_welcome_default_default
 
     access_control:
-        - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/connect, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(login|redirect|connect), role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/*, role: ROLE_USER }

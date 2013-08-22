@@ -1,48 +1,55 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+{% extends '::base.html.twig' %}
 
-<head>
-    <meta charset="utf-8" />
+{% block body %}
+{% spaceless %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                {% block content '' %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-sm-offset-5">
+                {% if is_granted('ROLE_OAUTH_USER') %}
+                    <a class="btn btn-primary btn-block btn-xs" href="{{ path('toa_welcome_security_logout') }}">
+                        logout
+                        {{- ' ' -}}
+                        <span class="glyphicon glyphicon-log-out"></span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endspaceless %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% stylesheets
+        'bower_components/bootstrap/dist/css/bootstrap.css'
+        'bower_components/bootstrap/dist/css/bootstrap-theme.css'
+        'bundles/toawelcome/scss/main.scss'
+        filter='cssrewrite,?yui_css'
+        output='css/compiled/toawelcome.css'
+    %}
+        <link href="{{ asset_url }}" rel="stylesheet" type="text/css">
+    {% endstylesheets %}
+{% endblock %}
 
-    {% block stylesheets %}
-        {% stylesheets
-            'bundles/toawelcome/scss/main.scss'
-            filter='cssrewrite,?yui_css'
-            output='css/compiled/toawelcome.css'
-        %}
-            <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
-        {% endstylesheets %}
-    {% endblock %}
+{% block javascripts %}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
 
-    <script src="{{ asset('bower_components/foundation/js/vendor/custom.modernizr.js') }}"></script>
-</head>
-<body>
-    {% block body %}{% endblock %}
-
-    <script type="text/javascript">
-        document.write('<script src="' + (
-            '__proto__' in {}
-            ? '{{ asset('bower_components/foundation/js/vendor/zepto.js') }}'
-            : '{{ asset('bower_components/foundation/js/vendor/jquery.js') }}'
-        ) + '"><\/script>')
-    </script>
-
-    {% block javascripts %}
-        {% javascripts
-            'bower_components/foundation/js/foundation/foundation.js'
-            'bower_components/foundation/js/foundation/foundation*.js'
-            filter='?yui_js'
-            output='js/compiled/toawelcome.js'
-        %}
-            <script src="{{ asset_url }}" type="text/javascript"></script>
-        {% endjavascripts %}
-    {% endblock %}
-
-    <script type="text/javascript">
-        $(document).foundation();
-    </script>
-</body>
-</html>
+    {% javascripts
+        'bower_components/jquery/jquery.js'
+        'bower_components/bootstrap/dist/js/bootstrap.js'
+        filter='?yui_js'
+        output='js/compiled/toawelcome.js'
+    %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}

@@ -1,23 +1,21 @@
 {% extends 'ToaWelcomeBundle::layout.html.twig' %}
 
-{% block body %}
-    <div class="row users">
-        <div class="small-8 small-centered columns">
-            <ul class="small-block-grid-2 large-block-grid-4">
-                {% for a in 0..0 %}
-                    {% for p in ['Jana', 'Jakob', 'Anton', 'Enrico'] %}
-                        <li class="user">
-                            <a href="{{ path('toa_welcome_default_detail', {'name': p|lower}) }}" class="th round small-10">
-                                <img class="small-12 {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                            </a>
-
-                            <div>
-                                <span class="label round inverse username">{{ p }}</span>
-                            </div>
-                        </li>
-                    {% endfor %}
-                {% endfor %}
-            </ul>
-        </div>
+{% block content %}
+{% spaceless %}
+    <div class="row people">
+        {% for p in ['Jana', 'Jakob', 'Anton', 'Enrico'] %}
+            <div class="col-xs-6 col-sm-6 col-md-3 text-center">
+                <a href="{{ path('toa_welcome_default_detail', {'name': p|lower}) }}">
+                    <img class="img-circle img-thumbnail {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                </a>
+                <br /><br />
+                <span class="badge inverse">{{ p }}</span>
+                <br /><br />
+            </div>
+            {% if loop.index % 2 == 0 %}
+                <div class="clearfix visible-xs"></div>
+            {% endif %}
+        {% endfor %}
     </div>
+{% endspaceless %}
 {% endblock %}

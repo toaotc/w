@@ -90,7 +90,6 @@ services:
 
 hwi_oauth:
     firewall_name: secured_area
-    connect: ~
     resource_owners:
         google:
             type:           google
