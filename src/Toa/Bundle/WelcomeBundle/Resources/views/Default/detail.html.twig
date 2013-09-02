@@ -3,14 +3,16 @@
 {% block content %}
 {% spaceless %}
     <div class="row people">
-        {% for p in ['Jana', 'Jakob', 'Anton', 'Enrico'] if p|lower == name %}
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
-                <a href="{{ path('toa_welcome_default_default') }}">
-                    <img class="img-circle img-thumbnail {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                </a>
-                <br /><br />
-                <span class="badge inverse">{{ p }}</span>
-                <br /><br />
+        {% for i, p in ['Jana', 'Jakob', 'Anton', 'Enrico'] if p|lower == name %}
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center" data-toggle="parallax">
+                <div class="layer" data-depth="2">
+                    <a href="{{ path('toa_welcome_default_default') }}">
+                        <img class="img-circle img-thumbnail {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                    </a>
+                    <br /><br />
+                    <span class="badge inverse">{{ p }}</span>
+                    <br /><br />
+                </div>
             </div>
             {% if loop.index % 2 == 0 -%}
                 <div class="clearfix visible-xs"></div>
