@@ -86,8 +86,11 @@ services:
        class: Twig_Extensions_Extension_Text
        tags:
            - { name: twig.extension }
-    oauth.user.provider:
-        class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
+
+fos_user:
+    db_driver: orm
+    user_class: FOS\UserBundle\Entity\User
+    firewall_name: default
 
 hwi_oauth:
     firewall_name: secured_area

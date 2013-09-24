@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Misd\PhoneNumberBundle\MisdPhoneNumberBundle(),
 
+            new FOS\UserBundle\FOSUserBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new Toa\Bundle\AddressbookBundle\ToaAddressbookBundle(),
             new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),

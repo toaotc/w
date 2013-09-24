@@ -12,7 +12,7 @@ security:
 
     providers:
         oauth:
-            id: oauth.user.provider
+            id: hwi_oauth.user.provider
 
     firewalls:
         dev:
@@ -28,7 +28,7 @@ security:
                 login_path:         hwi_oauth_connect
                 failure_path:       hwi_oauth_connect
                 oauth_user_provider:
-                    service: oauth.user.provider
+                    service: hwi_oauth.user.provider
             logout:
                 path: toa_welcome_security_logout
                 target: toa_welcome_default_default
