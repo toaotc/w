@@ -23,6 +23,7 @@
         "jms/security-extra-bundle": "*",
         "jms/di-extra-bundle": "*",
         "stof/doctrine-extensions-bundle": "*@dev",
+        "friendsofsymfony/user-bundle": "*",
         "hwi/oauth-bundle": "@dev"
     },
     "require-dev": {
