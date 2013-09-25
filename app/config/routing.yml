@@ -10,6 +10,8 @@ hwi_oauth_connect:
 
 google_login:
     pattern: /login/check-google
+twitter_login:
+    pattern: /login/check-twitter
 
 
 

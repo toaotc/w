@@ -3,14 +3,24 @@
 {% block content %}
 {% spaceless %}
     <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
-            {% for owner in hwi_oauth_resource_owners() %}
-                <a class="btn btn-lg btn-primary btn-block" href="{{ hwi_oauth_login_url(owner) }}">
-                    <span class="glyphicon glyphicon-log-in"></span>
-                    {{- ' ' }}
-                    {{- 'connect with %owner%'|trans({'%owner%': owner|trans({}, 'HWIOAuthBundle')}) -}}
+        <div class="col-sm-4 col-sm-offset-4 text-center">
+            <div class="">
+                <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Login with
+                    <b class="caret"></b>
                 </a>
-            {% endfor %}
+                <ul class="dropdown-menu">
+                    {% for owner in hwi_oauth_resource_owners() %}
+                        <li>
+                            <a href="{{ hwi_oauth_login_url(owner) }}">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                {{- '&#160;' }}
+                                {{- '%owner%'|trans({'%owner%': owner|trans({}, 'HWIOAuthBundle')}) -}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 {% endspaceless %}

@@ -25,6 +25,7 @@ security:
             oauth:
                 resource_owners:
                     google:         google_login
+                    twitter:        twitter_login
                 login_path:         hwi_oauth_connect
                 failure_path:       hwi_oauth_connect
                 oauth_user_provider:
