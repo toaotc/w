@@ -18,10 +18,14 @@ security:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
-            
+        
+        public_area:
+            pattern:  ^/$
+            security: false
+        
         secured_area:
             anonymous: ~
-            pattern: ^/
+            pattern: ^/*
             oauth:
                 resource_owners:
                     google:         google_login
@@ -36,5 +40,8 @@ security:
 
     access_control:
         - { path: ^/(login|redirect|connect), role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/gallery, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/*, role: ROLE_USER }
+
+    acl:
+        connection: default

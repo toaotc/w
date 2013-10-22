@@ -8,17 +8,6 @@
                 {% block content '' %}
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-2 col-sm-offset-5">
-                {% if is_granted('ROLE_OAUTH_USER') %}
-                    <a class="btn btn-primary btn-block btn-xs" href="{{ path('toa_welcome_security_logout') }}">
-                        logout
-                        {{- ' ' -}}
-                        <span class="glyphicon glyphicon-log-out"></span>
-                    </a>
-                {% endif %}
-            </div>
-        </div>
     </div>
 {% endspaceless %}
 {% endblock %}
