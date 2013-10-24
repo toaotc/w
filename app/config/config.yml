@@ -87,10 +87,8 @@ services:
        tags:
            - { name: twig.extension }
 
-fos_user:
-    db_driver: orm
-    user_class: FOS\UserBundle\Entity\User
-    firewall_name: default
+toa_apc:
+    auto_clear: true
 
 hwi_oauth:
     firewall_name: secured_area

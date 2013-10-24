@@ -16,21 +16,12 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new Vich\UploaderBundle\VichUploaderBundle(),
-            new Misd\PhoneNumberBundle\MisdPhoneNumberBundle(),
 
-            new FOS\UserBundle\FOSUserBundle(),
             new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
-            new Toa\Bundle\AddressbookBundle\ToaAddressbookBundle(),
             new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),
-            //new Toa\Bundle\GenealogyBundle\ToaGenealogyBundle(),
-            //new Toa\Bundle\MediaBundle\ToaMediaBundle(),
-            new Toa\Bundle\AclTestBundle\ToaAclTestBundle(),
+            new Toa\Bundle\ApcBundle\ToaApcBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

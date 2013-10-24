@@ -20,10 +20,8 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "jms/security-extra-bundle": "*",
-        "jms/di-extra-bundle": "*",
         "stof/doctrine-extensions-bundle": "*@dev",
-        "friendsofsymfony/user-bundle": "*",
+        "toa/apc-bundle": "*@dev",
         "hwi/oauth-bundle": "@dev"
     },
     "require-dev": {
