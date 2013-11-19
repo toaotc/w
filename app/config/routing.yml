@@ -1,20 +1,3 @@
-hwi_oauth_login:
-    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
-    prefix:   /login
-hwi_oauth_redirect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
-    prefix:   /redirect
-hwi_oauth_connect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
-    prefix:   /connect
-
-google_login:
-    pattern: /login/check-google
-twitter_login:
-    pattern: /login/check-twitter
-
-
-
 toa_welcome:
     resource: "@ToaWelcomeBundle/Controller/"
     type:     annotation

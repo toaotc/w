@@ -20,9 +20,6 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "stof/doctrine-extensions-bundle": "*@dev",
-        "toa/apc-bundle": "*@dev",
-        "hwi/oauth-bundle": "@dev"
     },
     "require-dev": {
         "leafo/lessphp": "*",

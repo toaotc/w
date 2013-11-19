@@ -72,11 +72,6 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-stof_doctrine_extensions:
-    orm:
-        default:
-            timestampable: true
-
 services:
     twig.extension.intl:
        class: Twig_Extensions_Extension_Intl
@@ -86,19 +81,3 @@ services:
        class: Twig_Extensions_Extension_Text
        tags:
            - { name: twig.extension }
-
-toa_apc:
-    auto_clear: true
-
-hwi_oauth:
-    firewall_name: secured_area
-    resource_owners:
-        google:
-            type:           google
-            client_id:      "%google_client_id%"
-            client_secret:  "%google_client_secret%"
-            scope:          "https://www.googleapis.com/auth/userinfo.profile"
-        twitter:
-            type:           twitter
-            client_id:      "%twitter_client_id%"
-            client_secret:  "%twitter_client_secret%"

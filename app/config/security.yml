@@ -1,14 +1,7 @@
 security:
-    encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-
     providers:
-        oauth:
-            id: hwi_oauth.user.provider
+        in_memory:
+            memory: ~
 
     firewalls:
         dev:
@@ -16,28 +9,8 @@ security:
             security: false
         
         public_area:
-            pattern:  ^/$
+            pattern:  ^/
             security: false
-        
+
         secured_area:
             anonymous: ~
-            pattern: ^/*
-            oauth:
-                resource_owners:
-                    google:         google_login
-                    twitter:        twitter_login
-                login_path:         hwi_oauth_connect
-                failure_path:       hwi_oauth_connect
-                oauth_user_provider:
-                    service: hwi_oauth.user.provider
-            logout:
-                path: toa_welcome_security_logout
-                target: toa_welcome_default_default
-
-    access_control:
-        - { path: ^/(login|redirect|connect), role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/gallery, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/*, role: ROLE_USER }
-
-    acl:
-        connection: default
