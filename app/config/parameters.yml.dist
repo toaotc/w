@@ -14,8 +14,4 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    google_client_id: ~
-    google_client_secret: ~
-    
-    twitter_client_id: ~
-    twitter_client_secret: ~
+    assetic.ruby.bin: ~
