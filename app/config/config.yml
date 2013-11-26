@@ -35,8 +35,6 @@ assetic:
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
-        lessphp:
-            apply_to: \.less$
         compass:
             apply_to: \.scss$
         #closure:
