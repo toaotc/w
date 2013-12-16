@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),
+            new Toa\Bundle\MiscBundle\ToaMiscBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

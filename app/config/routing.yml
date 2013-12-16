@@ -1,3 +1,8 @@
+toa_misc:
+    resource: "@ToaMiscBundle/Controller/"
+    type:     annotation
+    prefix:   /misc
+
 toa_welcome:
     resource: "@ToaWelcomeBundle/Controller/"
     type:     annotation
