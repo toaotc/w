@@ -2,9 +2,11 @@ toa_misc:
     resource: "@ToaMiscBundle/Controller/"
     type:     annotation
     prefix:   /misc
+    schemes:  [ https ]
 
 toa_welcome:
     resource: "@ToaWelcomeBundle/Controller/"
     type:     annotation
     prefix:   /
+    schemes:  [ https ]
 
