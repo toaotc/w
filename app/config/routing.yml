@@ -1,7 +1,8 @@
 toa_misc:
-    resource: "@ToaMiscBundle/Controller/"
-    type:     annotation
-    prefix:   /misc
+    defaults:
+        _controller: "ToaMiscBundle:Default:ip"
+    host:   ip.schwabbauer.eu
+    path:   /
     schemes:  [ https ]
 
 toa_welcome:
