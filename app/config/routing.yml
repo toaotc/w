@@ -1,9 +1,8 @@
-toa_misc:
+toa_misc_ip:
     defaults:
         _controller: "ToaMiscBundle:Default:ip"
     host:   ip.schwabbauer.eu
     path:   /
-    schemes:  [ https ]
 
 toa_welcome:
     resource: "@ToaWelcomeBundle/Controller/"
