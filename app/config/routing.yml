@@ -1,8 +1,10 @@
 toa_misc_ip:
     defaults:
         _controller: "ToaMiscBundle:Default:ip"
-    host:   ip.schwabbauer.eu
+    host:   "ip.{tldomain}"
     path:   /
+    requirements:
+        tldomain: "%tldomains%"
 
 toa_welcome:
     resource: "@ToaWelcomeBundle/Controller/"
