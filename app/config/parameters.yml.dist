@@ -16,4 +16,6 @@ parameters:
 
     assetic.ruby.bin: ~
 
-    tldomains: "localhost" # domain1|domain2|...
+    domains: "localhost" # domain1|domain2|...
+    default_domain: localhost
+    
