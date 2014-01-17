@@ -81,3 +81,9 @@ services:
         tags:
             - { name: twig.extension }
 
+toa_misc:
+    router:
+        recycle_attributes:
+            - _domain
+            - _subdomain
+
