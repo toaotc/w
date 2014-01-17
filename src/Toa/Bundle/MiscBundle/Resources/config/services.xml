@@ -5,13 +5,15 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="toa_misc.router_hostparams_listener.class">Toa\Bundle\MiscBundle\EventListener\HostParamsListener</parameter>
+        <parameter key="toa_misc.router_recycle_attributes_listener.class">Toa\Bundle\MiscBundle\EventListener\RecycleAttributesListener</parameter>
     </parameters>
 
     <services>
-        <service id="toa_misc.router_hostparams_listener" class="%toa_misc.router_hostparams_listener.class%">
-            <argument type="service" id="router" />
+        <service id="toa_misc.router_recycle_attributes_listener" class="%toa_misc.router_recycle_attributes_listener.class%">
             <tag name="kernel.event_subscriber" />
+            <argument>%toa_misc.router.recycle_attributes%</argument>
+            <argument type="service" id="router" on-invalid="ignore" />
+            <argument type="service" id="request_stack" />
         </service>
     </services>
 </container>
