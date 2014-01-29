@@ -12,7 +12,7 @@
     img {
         &.img-thumbnail {
             @include background-size(cover);
-            @include box-shadow(0 0 0 3px white, 1px 0 5px 3px black, 0px 0 3px black inset !important);
+            @include box-shadow(0 0 0 3px white, 0 0 5px 3px black, 0px 0 3px black inset !important);
             width: 75%;
         }
         
@@ -27,12 +27,12 @@
 }
 
 html {
-  @include background(linear-gradient(top, #ccc, #333));
-  background: -ms-linear-gradient(top, #ccc, #333);
+  @include background(linear-gradient(top, #f9efdf, #eee));
+  background: -ms-linear-gradient(top, #f9efdf, #eee);
   min-height: 100%;
 }
-
 body {
   background-color: transparent;
-  padding-top: 15%;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
