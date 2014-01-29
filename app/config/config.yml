@@ -32,6 +32,7 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: false
     bundles:
+        - ToaLayoutBundle
         - ToaWelcomeBundle
     #java: /usr/bin/java
     filters:
