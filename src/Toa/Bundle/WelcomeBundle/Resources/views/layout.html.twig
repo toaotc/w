@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'ToaLayoutBundle:bootstrap3:layout.html.twig' %}
 
 {% block body %}
 {% spaceless %}
@@ -15,10 +15,8 @@
 {% block stylesheets %}
 {% spaceless %}
     {{ parent() }}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {% stylesheets
-        'components/bootstrap/dist/css/bootstrap.css'
-        'components/bootstrap/dist/css/bootstrap-theme.css'
         'bundles/toawelcome/scss/main.scss'
         filter='cssrewrite'
         output='css/compiled/toawelcome.css'
@@ -31,20 +29,8 @@
 {% block javascripts %}
 {% spaceless %}
     {{ parent() }}
-    {#<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->#}
-    <!--[if lt IE 9]>
-    {% javascripts
-        'components/html5shiv/dist/html5shiv.js'
-        'components/respond/dest/respond.min.js'
-        output='js/compiled/toawelcome_lt_ie9.js'
-    %}
-        <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
-    <![endif]-->
 
     {% javascripts
-        'components/jquery/jquery.js'
-        'components/bootstrap/dist/js/bootstrap.js'
         'components/parallax/source/parallax.js'
         'components/parallax/source/requestAnimationFrame.js'
         'components/parallax/source/jquery.parallax.js'
