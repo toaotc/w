@@ -12,7 +12,12 @@
     img {
         &.img-thumbnail {
             @include background-size(cover);
-            @include box-shadow(0 0 0 3px white, 0 0 5px 3px black, 0px 0 3px black inset !important);
+            @include box-shadow(
+                0 0 0 3px white, 
+                0 1px 5px 3px black, 
+                0 1px 3px black inset !important
+            );
+            border: 0 none;
             width: 75%;
         }
         
