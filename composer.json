@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
         "toa/bower-bundle": "@dev",
-        "toa/layout-bundle": "@dev",
+        "toa/layout-bundle": "*",
         "incenteev/composer-parameter-handler": "~2.0",
         "stof/doctrine-extensions-bundle": "*"
     },
