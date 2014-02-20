@@ -17,5 +17,9 @@ parameters:
     domains: "localhost" # domain1|domain2|...
     default_domain: localhost
     
+    ornicar_apc_host:       localhost
+    ornicar_apc_webdir:     "%kernel.root_dir%/../web"
+    ornicar_apc_mode:       curl
+    
     assets_base_urls_http: []
     assets_base_urls_ssl: []

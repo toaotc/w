@@ -1,0 +1,4 @@
+ornicar_apc:
+    host:       "%ornicar_apc_host%"
+    web_dir:    "%ornicar_apc_webdir%"
+    mode:       "%ornicar_apc_mode%"

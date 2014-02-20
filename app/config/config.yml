@@ -1,5 +1,6 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: imports/ornicar.yml }
     - { resource: imports/stof.yml }
     - { resource: imports/toa.yml }
     - { resource: imports/twig.yml }
