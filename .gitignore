@@ -1,18 +1,13 @@
-# Bootstrap
-app/bootstrap*
-
-# Symfony directories
-/app/logs/*
+/web/bundles/
+/app/bootstrap.php.cache
 /app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/build/
+/vendor/
 /bin/
-/vendor
-web/uploads/*
-web/bundles/*
+/composer.phar
 
-# Configuration files
-app/config/parameters.ini
-app/config/parameters.yml
-composer.lock
-.settings
-.project
-.buildpath
+/web/uploads/*
