@@ -1,5 +1,8 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: imports/stof.yml }
+    - { resource: imports/toa.yml }
+    - { resource: imports/twig.yml }
 #    - { resource: security.yml }
 
 framework:
@@ -72,25 +75,3 @@ doctrine:
 #    username:  "%mailer_user%"
 #    password:  "%mailer_password%"
 #    spool:     { type: memory }
-
-stof_doctrine_extensions:
-    orm:
-        default:
-            timestampable: true
-
-services:
-    twig.extension.intl:
-        class: Twig_Extensions_Extension_Intl
-        tags:
-            - { name: twig.extension }
-    twig.extension.text:
-        class: Twig_Extensions_Extension_Text
-        tags:
-            - { name: twig.extension }
-
-toa_misc:
-    router:
-        recycle_attributes:
-            - _domain
-            - _subdomain
-
