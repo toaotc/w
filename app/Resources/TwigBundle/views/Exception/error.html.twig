@@ -1,13 +1,23 @@
-{% extends 'TwigBundle::layout.html.twig' %}
+{% extends 'ToaWelcomeBundle::layout.html.twig' %}
 
-{% block head %}
-    <link href="{{ asset('bundles/framework/css/exception.css') }}" rel="stylesheet" type="text/css" media="all" />
-{% endblock %}
+{% block title %}An Error Occurred: {{ status_text }}{% endblock %}
 
-{% block title %}
-    {{ exception.message }} ({{ status_code }} {{ status_text }})
-{% endblock %}
+{% block content %}
+    <div class="panel panel-danger text-center">
+        <div class="panel-heading">
+            <h1 class="panel-title">Oops! An Error Occurred</h1>
+        </div>
+        <div class="panel-body">
+            <h2>The server returned a "{{ status_code }} {{ status_text }}".</h2>
+        </div>
+        <div class="panel-footer">
+            <p>
+                Something is broken. Please e-mail us at [email] and let us know
+                what you were doing when this error occurred. We will fix it as soon
+                as possible. Sorry for any inconvenience caused.
+            </p>
+        </div>
+    </div>
 
-{% block body %}
-    {% include 'TwigBundle:Exception:exception.html.twig' %}
+
 {% endblock %}
