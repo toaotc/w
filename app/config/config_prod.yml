@@ -1,7 +1,11 @@
 imports:
     - { resource: config.yml }
 
-#framework:
+framework:
+    templating:
+        assets_base_urls:
+            http: "%assets_base_urls_http%"
+            ssl: "%assets_base_urls_ssl%"
 #    validation:
 #        cache: apc
 
@@ -19,5 +23,5 @@ monolog:
             handler:      nested
         nested:
             type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug

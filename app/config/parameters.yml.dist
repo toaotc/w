@@ -19,3 +19,5 @@ parameters:
     domains: "localhost" # domain1|domain2|...
     default_domain: localhost
     
+    assets_base_urls_http: []
+    assets_base_urls_ssl: []
