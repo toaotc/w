@@ -14,8 +14,6 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    assetic.ruby.bin: ~
-
     domains: "localhost" # domain1|domain2|...
     default_domain: localhost
     
