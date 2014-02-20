@@ -21,7 +21,6 @@
     {% stylesheets
         'bundles/toawelcome/scss/main.scss'
         filter='cssrewrite,?yui_css'
-        output='css/compiled/toawelcome.css'
     %}
         <link href="{{ asset_url }}" rel="stylesheet" type="text/css">
     {% endstylesheets %}
@@ -36,7 +35,6 @@
         'bundles/toawelcome/components/parallax/deploy/jquery.parallax.js'
         'bundles/toawelcome/js/parallax.js'
         filter='?yui_js'
-        output='js/compiled/toawelcome.js'
     %}
         <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
