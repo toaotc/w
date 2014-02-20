@@ -20,7 +20,7 @@
 
     {% stylesheets
         'bundles/toawelcome/scss/main.scss'
-        filter='cssrewrite'
+        filter='cssrewrite,?yui_css'
         output='css/compiled/toawelcome.css'
     %}
         <link href="{{ asset_url }}" rel="stylesheet" type="text/css">
