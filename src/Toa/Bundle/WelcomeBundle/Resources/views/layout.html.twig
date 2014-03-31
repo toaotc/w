@@ -20,7 +20,6 @@
 
     {% stylesheets
         'bundles/toawelcome/scss/main.scss'
-        filter='cssrewrite,?yui_css'
     %}
         <link href="{{ asset_url }}" rel="stylesheet" type="text/css">
     {% endstylesheets %}
@@ -34,7 +33,6 @@
     {% javascripts
         'bundles/toawelcome/components/parallax/deploy/jquery.parallax.js'
         'bundles/toawelcome/js/parallax.js'
-        filter='?yui_js'
     %}
         <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
