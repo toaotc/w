@@ -34,7 +34,12 @@ class DefaultController extends Controller
      *
      * @return array
      *
-     * @Route("/welcome/{name}")
+     * @Route(
+     *     "/welcome/{name}",
+     *     requirements = {
+     *         "name" = "jana|jakob|anton|enrico"
+     *     }
+     * )
      * @Template()
      */
     public function detailAction($name)
