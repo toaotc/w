@@ -1,0 +1,5 @@
+framework:
+    translator:      { fallback: "%locale%" }
+    trusted_proxies:
+        - 127.0.0.1
+        - ::1

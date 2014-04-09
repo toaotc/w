@@ -1,0 +1,16 @@
+assetic:
+    bundles:
+        - ToaLayoutBundle
+        - ToaWelcomeBundle
+    filters:
+        cssrewrite:
+            apply_to: \.css$
+        compass:
+            apply_to: \.scss$
+        yui_css:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.8.jar"
+            apply_to: \.css$
+        yui_js:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.8.jar"
+            apply_to: \.js$
+        
