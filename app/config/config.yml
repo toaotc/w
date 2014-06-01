@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: imports/framework.yml }
     - { resource: imports/assetic.yml }
+    - { resource: "@ToaLayoutBundle/Resources/config/assetic/bootstrap3.yml" }
     - { resource: imports/doctrine.yml }
     - { resource: imports/ornicar.yml }
     - { resource: imports/stof.yml }
