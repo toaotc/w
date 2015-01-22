@@ -37,15 +37,23 @@ set :keep_releases,     3
 
 task :upload_parameters, :roles => :app do
   capifony_pretty_print "--> Copying parameters.yml to temp location"
-  
+
   origin_file = "app/config/parameters.yml"
   destination_file = $temp_destination + "/app/config/parameters.yml"
-  
+
   run_locally "cp #{origin_file} #{destination_file}"
   capifony_puts_ok
 end
 
 before "symfony:composer:install", "upload_parameters"
+
+namespace :deploy do
+  task :composer_scripts, :roles => :web do
+    capifony_pretty_print "--> Running Composer post-install-commands"
+    run_locally "cd #{$temp_destination} && SYMFONY_ENV=#{symfony_env_prod} #{php_bin} composer.phar run-script --no-dev post-install-cmd"
+    capifony_puts_ok
+  end
+end
 
 namespace :deploy do
   task :dump_assets_locally, :roles => :web do
@@ -55,7 +63,7 @@ namespace :deploy do
   end
 end
 
-after "symfony:bootstrap:build", "deploy:dump_assets_locally"
+after "symfony:bootstrap:build", "deploy:composer_scripts", "deploy:dump_assets_locally"
 
 namespace :symfony do
   desc "Clear apc cache"
