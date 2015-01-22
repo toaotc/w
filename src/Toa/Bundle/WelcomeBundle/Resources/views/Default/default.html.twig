@@ -3,8 +3,8 @@
 {% block content %}
 {% spaceless %}
     <div class="row people">
-        {% for i, p in ['Jana', 'Jakob', 'Anton', 'Enrico'] %}
-            <div class="col-xs-6 col-sm-6 col-md-3 text-center" data-toggle="parallax">
+        {% for i, p in ['Jana', 'Jakob', 'Anton', 'Enrico', 'Sunny', 'Jette'] %}
+            <div class="col-xs-6 col-sm-6 col-md-4 text-center" data-toggle="parallax">
                 <div class="layer" data-depth="{{ i - 2.5 + 1 }}">
                     <a href="{{ path('toa_welcome_default_detail', {'name': p|lower}) }}">
                         <img class="img-circle img-thumbnail {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />

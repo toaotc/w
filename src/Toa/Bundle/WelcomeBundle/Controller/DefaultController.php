@@ -37,7 +37,7 @@ class DefaultController extends Controller
      * @Route(
      *     "/welcome/{name}",
      *     requirements = {
-     *         "name" = "jana|jakob|anton|enrico"
+     *         "name" = "jana|jakob|anton|enrico|sunny|jette"
      *     }
      * )
      * @Template()
