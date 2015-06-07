@@ -18,8 +18,8 @@ parameters:
     debug_redirects:        false
     use_assetic_controller: true
 
-    domains: "localhost" # domain1|domain2|...
-    default_domain: localhost
+    domain1: "localhost"
+    domain2: "localhost"
     
     ornicar_apc_host:       localhost
     ornicar_apc_webdir:     "%kernel.root_dir%/../web"

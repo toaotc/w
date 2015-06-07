@@ -1,14 +1,14 @@
 toa_misc_ip:
     defaults:
         _controller: "ToaMiscBundle:Default:ip"
-    host:     "{_subdomain}.{_domain}"
+    host:     "ip.{_domain}"
     path:   /
     requirements:
-        _domain: "%domains%"
-        _subdomain: ip
+        _domain: "%domain1%|%domain2%"
 
 toa_welcome:
     resource: "@ToaWelcomeBundle/Controller/"
     type:     annotation
+    host:     "%domain1%"
     prefix:   /
     schemes:  [ https ]
