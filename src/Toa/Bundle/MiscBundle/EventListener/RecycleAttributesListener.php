@@ -22,15 +22,20 @@ class RecycleAttributesListener implements EventSubscriberInterface
     private $requestStack;
 
     /**
-     * RequestStack will become required in 3.0.
+     * @param array                        $attributeNames
+     * @param RequestContextAwareInterface $router
+     * @param RequestStack                 $requestStack
      */
-    public function __construct($attributeNames = null, RequestContextAwareInterface $router = null, RequestStack $requestStack = null)
+    public function __construct($attributeNames = array(), RequestContextAwareInterface $router = null, RequestStack $requestStack = null)
     {
         $this->attributeNames = $attributeNames;
         $this->requestStack = $requestStack;
         $this->router = $router;
     }
 
+    /**
+     * @param GetResponseEvent $event
+     */
     public function onKernelRequest(GetResponseEvent $event)
     {
         if (null === $this->attributeNames) {
@@ -44,6 +49,9 @@ class RecycleAttributesListener implements EventSubscriberInterface
         }
     }
 
+    /**
+     * @param FinishRequestEvent $event
+     */
     public function onKernelFinishRequest(FinishRequestEvent $event)
     {
         if (null === $this->requestStack) {
