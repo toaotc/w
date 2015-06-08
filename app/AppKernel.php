@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Ornicar\ApcBundle\OrnicarApcBundle(),
             new Toa\Bundle\BowerBundle\ToaBowerBundle(),
             new Toa\Bundle\LayoutBundle\ToaLayoutBundle(),
+            new Toa\Bundle\FrameworkExtraBundle\ToaFrameworkExtraBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Toa\Bundle\WelcomeBundle\ToaWelcomeBundle(),
             new Toa\Bundle\MiscBundle\ToaMiscBundle(),

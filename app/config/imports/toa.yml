@@ -1,4 +1,4 @@
-toa_misc:
-    router:
+toa_framework_extra:
+    request:
         recycle_attributes:
             - _domain

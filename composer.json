@@ -20,9 +20,10 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "ornicar/apc-bundle": "*",
-        "toa/bower-bundle": "@dev",
+        "toa/bower-bundle": "*",
         "toa/layout-bundle": "*",
-        "stof/doctrine-extensions-bundle": "*"
+        "stof/doctrine-extensions-bundle": "*",
+        "toa/framework-extra-bundle": "^0.1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
