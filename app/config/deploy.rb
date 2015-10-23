@@ -47,23 +47,25 @@ end
 
 before "symfony:composer:install", "upload_parameters"
 
-namespace :deploy do
-  task :composer_scripts, :roles => :web do
-    capifony_pretty_print "--> Running Composer post-install-commands"
-    run_locally "cd #{$temp_destination} && SYMFONY_ENV=#{symfony_env_prod} #{php_bin} composer.phar run-script --no-dev post-install-cmd"
-    capifony_puts_ok
+namespace :symfony do
+  namespace :assets do
+    task :prepare, :roles => :web do
+      capifony_pretty_print "--> Installing bower components in temp location"
+      run_locally "cd #{$temp_destination} && app/console toa:bower:components:install --env=#{symfony_env_prod} --no-debug"
+      capifony_puts_ok
+      
+      capifony_pretty_print "--> Installing assets in temp location"
+      run_locally "cd #{$temp_destination} && app/console assets:install --env=#{symfony_env_prod} --no-debug"
+      capifony_puts_ok
+      
+      capifony_pretty_print "--> Dumping assets in temp location"
+      run_locally "cd #{$temp_destination} && app/console assetic:dump --env=#{symfony_env_prod} --no-debug"
+      capifony_puts_ok
+    end
   end
 end
 
-namespace :deploy do
-  task :dump_assets_locally, :roles => :web do
-    capifony_pretty_print "--> Dumping assets to temp location"
-    run_locally "cd #{$temp_destination} && app/console assetic:dump --env=#{symfony_env_prod} --no-debug"
-    capifony_puts_ok
-  end
-end
-
-after "symfony:bootstrap:build", "deploy:composer_scripts", "deploy:dump_assets_locally"
+after "symfony:bootstrap:build", "symfony:assets:prepare"
 
 namespace :symfony do
   desc "Clear apc cache"
