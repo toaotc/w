@@ -1,0 +1,18 @@
+{% extends 'ToaWelcomeBundle:Schwabbauer:layout.html.twig' %}
+
+{% block content %}
+{% spaceless %}
+    <div class="row people">
+            <div class="col-xs-8 col-xs-offset-2 text-center" data-toggle="parallax">
+                <div class="layer" data-depth="2">
+                    <a href="{{ path('toa_welcome_schwabbauer_default') }}">
+                        <img class="img-circle img-thumbnail {{ name }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                    </a>
+                    <br /><br />
+                    <span class="badge inverse">{{ name|capitalize }}</span>
+                    <br /><br />
+                </div>
+            </div>
+    </div>
+{% endspaceless %}
+{% endblock %}

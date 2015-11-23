@@ -6,9 +6,16 @@ toa_misc_ip:
     requirements:
         _domain: "%domain1%|%domain2%"
 
-toa_welcome:
-    resource: "@ToaWelcomeBundle/Controller/"
+toa_welcome_schwabbauer:
+    resource: "@ToaWelcomeBundle/Controller/SchwabbauerController.php"
     type:     annotation
     host:     "%domain1%"
+    prefix:   /
+    schemes:  [ https ]
+
+toa_welcome_fuchluchs:
+    resource: "@ToaWelcomeBundle/Controller/FuchsLuchsController.php"
+    type:     annotation
+    host:     "%domain2%"
     prefix:   /
     schemes:  [ https ]

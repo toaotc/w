@@ -1,0 +1,18 @@
+@import "compass";
+
+.people {
+    img {
+        &.jana { background-image: url(../images/schwabbauer/jana.jpg); }
+        &.jakob { background-image: url(../images/schwabbauer/jakob.jpg); }
+        &.anton { background-image: url(../images/schwabbauer/anton.jpg); }
+        &.enrico { 
+            background-image: url(http://s.gravatar.com/avatar/6cee33b651e13b04cd89c6456958f977?s=240); 
+        }
+    }
+}
+
+html {
+  @include background(linear-gradient(top, #f9efdf, #eee));
+  background: -ms-linear-gradient(top, #f9efdf, #eee);
+  min-height: 100%;
+}

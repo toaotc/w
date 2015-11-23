@@ -1,0 +1,22 @@
+{% extends 'ToaWelcomeBundle:FuchsLuchs:layout.html.twig' %}
+
+{% block content %}
+{% spaceless %}
+    {{ parent() }}
+
+    <div class="row people">
+        {% for i, p in ['Sunny', 'Jette', 'Enrico'] %}
+            <div class="col-xs-4 text-center">
+                <div class="layer" data-depth="{{ i - 2.5 + 1 }}">
+                    <a href="{{ path('toa_welcome_fuchsluchs_detail', {'name': p|lower}) }}">
+                        <img class="img-circle img-thumbnail {{ p|lower }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+                    </a>
+                    <br /><br />
+                    <span class="badge inverse">{{ p }}</span>
+                    <br /><br />
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endspaceless %}
+{% endblock %}

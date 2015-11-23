@@ -20,24 +20,9 @@
             border: 0 none;
             width: 75%;
         }
-        
-        &.jana { background-image: url(../images/jana.jpg); }
-        &.jakob { background-image: url(../images/jakob.jpg); }
-        &.anton { background-image: url(../images/anton.jpg); }
-        &.sunny { background-image: url(../images/sunny.jpg); }
-        &.jette { background-image: url(../images/jette.jpg); }
-        &.enrico { 
-            background-image: url(http://s.gravatar.com/avatar/6cee33b651e13b04cd89c6456958f977?s=240); 
-/*            @include filter(grayscale(75%) blur(2px));*/
-        }
     }
 }
 
-html {
-  @include background(linear-gradient(top, #f9efdf, #eee));
-  background: -ms-linear-gradient(top, #f9efdf, #eee);
-  min-height: 100%;
-}
 body {
   background-color: transparent;
   padding-bottom: 60px;

@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
- * Class DefaultController
+ * Class SchwabbauerController
  *
  * @author Enrico Thies <enrico.thies@gmail.com>
  *
@@ -16,7 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  *     smaxage=3600
  * )
  */
-class DefaultController extends Controller
+class SchwabbauerController extends Controller
 {
     /**
      * @return array
@@ -37,7 +37,7 @@ class DefaultController extends Controller
      * @Route(
      *     "/welcome/{name}",
      *     requirements = {
-     *         "name" = "jana|jakob|anton|enrico|sunny|jette"
+     *         "name" = "jana|jakob|anton|enrico"
      *     }
      * )
      * @Template()

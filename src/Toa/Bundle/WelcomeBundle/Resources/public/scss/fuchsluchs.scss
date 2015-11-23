@@ -1,0 +1,31 @@
+@import "compass";
+
+.panorama {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    
+    .layer {
+        background-image: url(../images/fuchsluchs/pano.jpg);
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+        margin-left: -50%;
+        width: 200%;
+    }
+}
+
+.people {
+    img {
+        &.sunny { background-image: url(../images/fuchsluchs/sunny.jpg); }
+        &.jette { background-image: url(../images/fuchsluchs/jette.jpg); }
+        &.enrico { background-image: url(../images/fuchsluchs/enrico.jpg); }
+    }
+}
+
+html {
+    min-height: 100%;
+}

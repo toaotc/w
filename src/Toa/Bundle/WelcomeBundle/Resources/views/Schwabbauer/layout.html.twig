@@ -1,0 +1,13 @@
+{% extends 'ToaWelcomeBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+{% spaceless %}
+    {{ parent() }}
+
+    {% stylesheets
+        'bundles/toawelcome/scss/schwabbauer.scss'
+    %}
+        <link href="{{ asset_url }}" rel="stylesheet" type="text/css">
+    {% endstylesheets %}
+{% endspaceless %}
+{% endblock %}
