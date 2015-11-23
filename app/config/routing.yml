@@ -9,13 +9,15 @@ toa_misc_ip:
 toa_welcome_schwabbauer:
     resource: "@ToaWelcomeBundle/Controller/SchwabbauerController.php"
     type:     annotation
-    host:     "%domain1%"
+    host:     "{_domain}"
     prefix:   /
-    schemes:  [ https ]
+    requirements:
+        _domain: "%domain1%|www.%domain1%"
 
 toa_welcome_fuchluchs:
     resource: "@ToaWelcomeBundle/Controller/FuchsLuchsController.php"
     type:     annotation
-    host:     "%domain2%"
+    host:     "{_domain}"
     prefix:   /
-    schemes:  [ https ]
+    requirements:
+        _domain: "%domain2%|www.%domain2%"
