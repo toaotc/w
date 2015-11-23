@@ -18,7 +18,7 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "ornicar/apc-bundle": "*",
+        "smart-core/accelerator-cache-bundle": "~1.1",
         "toa/bower-bundle": "*",
         "toa/layout-bundle": "*",
         "stof/doctrine-extensions-bundle": "*",
@@ -30,6 +30,7 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "SmartCore\\Bundle\\AcceleratorCacheBundle\\Composer\\ScriptHandler::clearCache",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
@@ -39,6 +40,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-update-cmd": [
+            "SmartCore\\Bundle\\AcceleratorCacheBundle\\Composer\\ScriptHandler::clearCache",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",

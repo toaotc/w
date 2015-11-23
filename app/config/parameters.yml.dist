@@ -21,9 +21,9 @@ parameters:
     domain1: "localhost"
     domain2: "localhost"
     
-    ornicar_apc_host:       localhost
-    ornicar_apc_webdir:     "%kernel.root_dir%/../web"
-    ornicar_apc_mode:       curl
+    accelerator_cache_host:       localhost
+    accelerator_cache_webdir:     "%kernel.root_dir%/../web"
+    accelerator_cache_mode:       curl
     
     assets_base_urls_http: []
     assets_base_urls_ssl: []
