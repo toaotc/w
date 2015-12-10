@@ -9,6 +9,7 @@ imports:
     - { resource: imports/toa.yml }
     - { resource: imports/twig.yml }
    #- { resource: security.yml }
+    - { resource: services.yml }
 
 framework:
     #esi:             ~
