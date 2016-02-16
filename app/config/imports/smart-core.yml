@@ -1,4 +1,0 @@
-accelerator_cache:
-    host:       "%accelerator_cache_host%"
-    web_dir:    "%accelerator_cache_webdir%"
-    mode:       "%accelerator_cache_mode%"

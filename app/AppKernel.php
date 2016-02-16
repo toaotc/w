@@ -17,7 +17,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
-            new SmartCore\Bundle\AcceleratorCacheBundle\AcceleratorCacheBundle(),
             new Toa\Bundle\BowerBundle\ToaBowerBundle(),
             new Toa\Bundle\LayoutBundle\ToaLayoutBundle(),
             new Toa\Bundle\FrameworkExtraBundle\ToaFrameworkExtraBundle(),
