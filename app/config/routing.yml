@@ -10,11 +10,13 @@ toa_welcome_schwabbauer:
     resource: "@ToaWelcomeBundle/Controller/SchwabbauerController.php"
     type:     annotation
     prefix:   /schwabbauer
+    schemes:  [ https ]
 
 toa_welcome_fuchluchs:
     resource: "@ToaWelcomeBundle/Controller/FuchsLuchsController.php"
     type:     annotation
     host:     "{_domain}"
     prefix:   /
+    schemes:  [ https ]
     requirements:
         _domain: "%domain2%|www.%domain2%"
