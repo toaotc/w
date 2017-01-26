@@ -13,8 +13,8 @@ end
 
 set :use_sudo,      false
 set :app_path,      "app"
-
-set :writable_dirs,       [app_path + "/cache"]
+set :writable_dirs,       ["var/cache"]
+set :symfony_console,     "bin/console"
 set :permission_method,   :acl
 set :use_set_permissions, false
 
@@ -28,7 +28,7 @@ set :model_manager, "doctrine"
 # Or: `propel`
 
 set :shared_files,      ["app/config/parameters.yml"]
-set :shared_children,   [app_path + "/logs"]
+set :shared_children,   ["var/logs"]
 
 set :use_composer,      true
 set :use_composer_tmp,  true
@@ -51,15 +51,15 @@ namespace :symfony do
   namespace :assets do
     task :prepare, :roles => :web do
       capifony_pretty_print "--> Installing bower components in temp location"
-      run_locally "cd #{$temp_destination} && app/console toa:bower:components:install --env=#{symfony_env_prod} --no-debug"
+      run_locally "cd #{$temp_destination} && #{php_bin} #{symfony_console} toa:bower:components:install --env=#{symfony_env_prod} --no-debug"
       capifony_puts_ok
       
       capifony_pretty_print "--> Installing assets in temp location"
-      run_locally "cd #{$temp_destination} && app/console assets:install --env=#{symfony_env_prod} --no-debug"
+      run_locally "cd #{$temp_destination} && #{php_bin} #{symfony_console} assets:install --env=#{symfony_env_prod} --no-debug"
       capifony_puts_ok
       
       capifony_pretty_print "--> Dumping assets in temp location"
-      run_locally "cd #{$temp_destination} && app/console assetic:dump --env=#{symfony_env_prod} --no-debug"
+      run_locally "cd #{$temp_destination} && #{php_bin} #{symfony_console} assetic:dump --env=#{symfony_env_prod} --no-debug"
       capifony_puts_ok
     end
   end

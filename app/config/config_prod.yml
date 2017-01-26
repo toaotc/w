@@ -2,10 +2,8 @@ imports:
     - { resource: config.yml }
 
 framework:
-    templating:
-        assets_base_urls:
-            http: "%assets_base_urls_http%"
-            ssl: "%assets_base_urls_ssl%"
+    assets:
+        base_urls: "%assets_base_urls%"
 #    validation:
 #        cache: apc
 
